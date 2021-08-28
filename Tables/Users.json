@@ -1,0 +1,20 @@
+[
+    {
+        "ID_id": "---",
+        "DT_createdAt": "",
+        "DT_updatedAt": "",
+        "ST_username": "",
+        "ST_password": "",
+        "ST_email": "",
+        "ST_fullname": "",
+        "ST_iosDeviceToken": "",
+        "ST_androidDeviceToken": "",
+        "BL_emailVerified": false,
+        "NU_badge": 0,
+        "ST_signInWith": "",
+        "FL_avatar": "",
+        "AR_reportedBy": [],
+        "ST_education": "",
+        "ST_location": ""
+    }
+]

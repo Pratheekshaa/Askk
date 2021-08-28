@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- IMPORTANT: REPLACE THE NAME OF THE APP BELOW WITH YOUR OWN ONE -->
+    <string name="app_name">Askk</string>
+
+
+    <!-- IMPORTANT: REPLACE THE STRINGS BELOW WITH YOUR OWN ONES ON http://apps.admob.com -->
+    <string name="ADMOB_INTERSTITIAL_UNIT_ID">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="ADMOB_APP_ID">ca-app-pub-7337790155065092~8384194898</string>
+
+</resources>

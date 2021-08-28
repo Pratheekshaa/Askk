@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/caAvatarImg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/default_avatar"/>
+
+    <TextView
+        android:id="@+id/caFullnameTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/caAvatarImg"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toEndOf="@id/caAvatarImg"
+        android:text="•••"
+        android:textColor="#000"
+        android:textSize="12sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/caAnsweredTxt"
+        android:layout_width="249dp"
+        android:layout_height="14dp"
+        android:layout_below="@id/caFullnameTxt"
+        android:layout_alignStart="@id/caFullnameTxt"
+        android:layout_alignEnd="@+id/caFullnameTxt"
+        android:text="Answered"
+        android:textColor="#555"
+        android:textSize="10sp"/>
+
+    <TextView
+        android:id="@+id/caBestAnswerTxt"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/caAnsweredTxt"
+        android:layout_alignStart="@id/caFullnameTxt"
+        android:layout_alignEnd="@+id/caAnsweredTxt"
+        android:text="√ Best Answer"
+        android:textColor="@color/main_color"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:visibility="invisible"/>
+
+
+    <TextView
+        android:id="@+id/caAnswerTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/caAvatarImg"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@id/caAnswerImgButton"
+        android:maxLines="4"
+        android:text="•••"
+        android:textColor="#000"
+        android:textSize="11sp"/>
+
+    <ImageView
+        android:id="@+id/caAnswerImgButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/caAnswerTxt"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/rounded_image"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        app:srcCompat="@drawable/logo"/>
+
+    <Button
+        android:id="@+id/caMoreButton"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+
+        android:layout_below="@+id/caAnswerTxt"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="10dp"
+        android:background="@android:color/transparent"
+        android:text="[more]"
+        android:textAllCaps="false"
+        android:textColor="@color/main_color"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/caLikeButton"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_below="@+id/caMoreButton"
+        android:layout_alignStart="@+id/caAnswerTxt"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/like_butt"/>
+
+    <TextView
+        android:id="@+id/caLikesTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_alignTop="@+id/caLikeButton"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/caLikeButton"
+        android:gravity="center_vertical"
+        android:text="0"
+        android:textColor="#000"
+        android:textSize="10sp"/>
+
+    <Button
+        android:id="@+id/caDislikeButton"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignTop="@+id/caLikeButton"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/caLikesTxt"
+        android:background="@drawable/dislike_butt"/>
+
+    <TextView
+        android:id="@+id/caDislikesTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_alignTop="@+id/caLikeButton"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/caDislikeButton"
+        android:gravity="center_vertical"
+        android:text="0"
+        android:textColor="#000"
+        android:textSize="10sp"/>
+
+    <Button
+        android:id="@+id/caReportAnswerButton"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignTop="@+id/caDislikeButton"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/caDislikesTxt"
+        android:background="@drawable/report_butt"/>
+
+    <Button
+        android:id="@+id/caEditAnswerButton"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignTop="@+id/caDislikeButton"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/caReportAnswerButton"
+        android:background="@drawable/edit_butt"/>
+
+    <Button
+        android:id="@+id/caSetBestAnswerButton"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignTop="@+id/caReportAnswerButton"
+        android:layout_alignEnd="@+id/caMoreButton"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/set_best_answer_butt"/>
+
+    <LinearLayout
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/caReportAnswerButton"
+        android:layout_marginTop="10dp"
+        android:background="#e1e1e1"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/ccatCell"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_color">
+
+    <TextView
+        android:id="@+id/ccatDateTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:text="•••"
+        android:textColor="#fff"
+        android:textSize="9sp"/>
+
+    <ImageView
+        android:id="@+id/ccatCategoryImg"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        />
+
+    <TextView
+        android:id="@+id/ccatCategoryTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_alignTop="@id/ccatCategoryImg"
+        android:layout_alignEnd="@id/ccatCategoryImg"
+        android:layout_marginEnd="28dp"
+        android:gravity="center_vertical"
+        android:textAlignment="textEnd"
+        android:textColor="#fff"
+        android:textSize="9sp"
+        tools:ignore="RtlCompat"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ccatAvatarImg"
+        android:layout_below="@id/ccatDateTxt"
+        android:layout_alignStart="@id/ccatDateTxt"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/default_avatar"
+        app:civ_border_color="#fff"
+        app:civ_border_width="2dp"
+        android:layout_width="44dp"
+        android:layout_height="44dp"/>
+
+    <TextView
+        android:id="@+id/ccatQuestionTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ccatAvatarImg"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toEndOf="@id/ccatAvatarImg"
+        android:maxLines="3"
+        android:text="•••"
+        android:textColor="#fff"
+        android:textSize="13dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/ccatAnsweredByTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ccatAvatarImg"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="0 answers • 0 views"
+        android:textColor="#fff"
+        android:textSize="11dp"/>
+
+    <ImageView
+        android:id="@+id/ccatCornerBottom"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_below="@id/ccatAnsweredByTxt"
+        android:layout_marginTop="-10dp"
+        app:srcCompat="@drawable/corner_bottom"/>
+
+    <ImageView
+        android:id="@+id/ccatCornerTop"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        app:srcCompat="@drawable/corner_top"/>
+</RelativeLayout>

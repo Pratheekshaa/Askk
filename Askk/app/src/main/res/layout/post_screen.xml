@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".PostScreen">
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#f3f5fa">
+
+
+        <ImageView
+            android:id="@+id/cornerBottom"
+            android:src="@drawable/corner_bottom"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentBottom="true"
+            app:srcCompat="@drawable/corner_bottom"/>
+
+        <Button
+            android:id="@+id/psDismissButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dismiss_butt_black"/>
+
+        <TextView
+            android:id="@+id/psTitleTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="70dp"
+            android:text="Ask something"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/psPostButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@android:color/transparent"
+            android:text="POST"
+            android:textColor="@color/main_color"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/psAddImageButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_below="@id/psPostButton"
+            android:layout_alignStart="@id/psPostButton"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/add_image_butt"/>
+
+        <TextView
+            android:id="@+id/psPostTitleTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/psDismissButton"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="65dp"
+            android:maxLines="2"
+            android:textColor="#555"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/psPostTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topBar"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@android:color/transparent"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Write something cool"
+        android:inputType="textMultiLine"
+        android:maxLines="6"
+        android:textColor="#000"
+        android:textCursorDrawable="@android:drawable/dark_header"
+        android:textSize="12sp"/>
+
+    <ImageView
+        android:id="@+id/psAttachmentImg"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@id/psPostTxt"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        />
+
+    <Button
+        android:id="@+id/psRemovePictureButton"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_alignTop="@id/psAttachmentImg"
+        android:layout_alignEnd="@id/psAttachmentImg"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/remove_pic_butt"
+        />
+
+</RelativeLayout>

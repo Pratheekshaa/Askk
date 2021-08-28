@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:focusableInTouchMode="true"
+    android:background="#fff">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/loginLogoImg"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logo"/>
+
+                <TextView
+                    android:id="@+id/linTitleTxt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/linUsernameTxt"
+                    android:layout_alignStart="@+id/linDismissButt"
+                    android:layout_below="@+id/loginLogoImg"
+                    android:layout_marginTop="20dp"
+                    android:text="Login to "
+                    android:textAlignment="center"
+                    android:textColor="#333"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/linDismissButt"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_above="@+id/linTitleTxt"
+                    android:layout_alignStart="@+id/linUsernameTxt"
+                    android:background="@drawable/dismiss_butt_black"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/main_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/linUsernameTxt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44dp"
+                    android:layout_below="@+id/linTitleTxt"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#C1C1C1"
+                    android:hint="USERNAME"
+                    android:imeOptions="actionNext"
+                    android:inputType="none"
+                    android:singleLine="true"
+                    android:textAlignment="textStart"
+                    android:textColor="#333"
+                    android:textSize="12sp"/>
+
+                <EditText
+                    android:id="@+id/linPasswordTxt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="44dp"
+                    android:layout_below="@+id/linUsernameTxt"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#C1C1C1"
+                    android:hint="PASSWORD"
+                    android:inputType="textPassword"
+                    android:textAlignment="textStart"
+                    android:textSize="12sp"/>
+
+                <Button
+                    android:id="@+id/linLoginButt"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/linPasswordTxt"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/rounded_login_signup_butt"
+                    android:text="Log in"
+                    android:textAllCaps="false"
+                    android:textColor="@color/main_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/linForgotPassButt"
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@android:color/transparent"
+                    android:text="Forgot password?"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/main_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold"/>
+
+
+                <Button
+                    android:id="@+id/linSignUpButt"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/linLoginButt"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/transparent"
+                    android:text="Sign up with Email "
+                    android:textAllCaps="false"
+                    android:textColor="@color/main_color"
+                    android:textSize="12sp"
+                    android:textStyle="normal|bold"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

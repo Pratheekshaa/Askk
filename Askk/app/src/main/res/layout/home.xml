@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:focusableInTouchMode="true"
+    tools:context=".Home">
+
+
+    <!-- TopBar -->
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#f3f5fa">
+
+        <EditText
+            android:id="@+id/hSearchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_below="@id/hLogoImg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/rounded_searchtxt"
+            android:ems="10"
+            android:hint="Search for questions"
+            android:imeOptions="actionSearch"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:paddingEnd="30dp"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textSize="11sp"
+            tools:ignore="HardcodedText"/>
+
+
+        <Button
+            android:id="@+id/hPostQuestionButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/post_butt"
+            android:textAllCaps="false"
+            android:textSize="11sp"
+            />
+
+        <ImageView
+            android:id="@+id/hLogoImg"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            ads:srcCompat="@drawable/logo"/>
+
+        <ImageView
+            android:id="@+id/hLensIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignTop="@id/hSearchEditText"
+            android:layout_alignRight="@id/hSearchEditText"
+            ads:srcCompat="@drawable/lens_icon"/>
+
+        <HorizontalScrollView
+            android:id="@+id/hCategoriesScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/hSearchEditText"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:scrollbarSize="1dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/hCategoriesLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"/>
+        </HorizontalScrollView>
+
+        <ImageView
+            android:id="@+id/cornerBottom"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentBottom="true"
+            ads:srcCompat="@drawable/corner_bottom"/>
+    </RelativeLayout>
+
+
+    <!-- Tab Bar -->
+
+    <RelativeLayout
+        android:id="@+id/noResultsLayout"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hCategoryTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:id="@+id/noResultIcon"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_centerHorizontal="true"
+            ads:srcCompat="@drawable/no_items"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/noResultIcon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Oops, it seems there are no questions..."
+            android:textAlignment="center"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tabBar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:background="#f3f5fa">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="0dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/tab1"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:background="@drawable/tab_home"
+                android:backgroundTint="@color/main_color"
+                android:paddingTop="35dp"
+                android:textAllCaps="false"
+                android:textColor="@color/main_color"
+                />
+
+            <Button
+                android:id="@+id/tab2"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginStart="60dp"
+                android:background="@drawable/tab_notifications"
+                android:backgroundTint="#777"
+                android:paddingTop="35dp"
+                android:textAllCaps="false"
+                />
+
+            <Button
+                android:id="@+id/tab3"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginStart="60dp"
+                android:background="@drawable/tab_account"
+                android:backgroundTint="#777"
+                android:paddingTop="35dp"
+                android:textAllCaps="false"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/hQuestionsListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tabBar"
+        android:layout_below="@id/hCategoryTxt"
+        android:background="#fff"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        />
+
+    <TextView
+        android:id="@+id/hCategoryTxt"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_below="@id/topBar"
+        android:text="LATEST"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textStyle="bold"/>
+
+
+</RelativeLayout>

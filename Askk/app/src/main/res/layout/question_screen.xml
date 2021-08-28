@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".QuestionScreen">
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#f3f5fa">
+
+
+        <ImageView
+            android:id="@+id/cornerBottom"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/corner_bottom"
+            app:srcCompat="@drawable/corner_bottom"/>
+
+        <Button
+            android:id="@+id/qsBackButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/back_butt"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/qsAvatarImg"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignTop="@id/qsBackButton"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_toEndOf="@id/qsBackButton"
+            android:src="@drawable/default_avatar"/>
+
+        <TextView
+            android:id="@+id/qsFullnameTxt"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_alignTop="@id/qsAvatarImg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="70dp"
+            android:layout_toRightOf="@id/qsAvatarImg"
+            android:gravity="center_vertical"
+            android:text="•••"
+            android:textColor="#000"
+            android:textSize="11sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/qsPostAnswerButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignTop="@id/qsBackButton"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/post_butt"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/qsBackButton"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/qsQuestionImgButton">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/qsQuestionTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="•••"
+                    android:textColor="#333"
+                    android:textSize="12sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/qsAnswersViewsTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_vertical"
+            android:text="0 Answers •0 Views"
+            android:textColor="#333"
+            android:textSize="10sp"/>
+
+        <Button
+            android:id="@+id/qsReportQuestionButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/report_butt"/>
+
+        <ImageView
+            android:id="@+id/qsQuestionImgButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/qsPostAnswerButton"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/rounded_image"
+            android:scaleType="centerCrop"
+            />
+
+        <Button
+            android:id="@+id/qsShareButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@id/qsReportQuestionButton"
+            android:background="@drawable/share_butt"/>
+
+        <Button
+            android:id="@+id/qsEditButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@id/qsShareButton"
+            android:background="@drawable/edit_butt"/>
+
+        <Button
+            android:id="@+id/qsQuestionUserButt"
+            android:layout_width="192dp"
+            android:layout_height="28dp"
+            android:layout_alignStart="@+id/qsAvatarImg"
+            android:layout_alignTop="@+id/qsAvatarImg"
+            android:layout_alignEnd="@+id/qsFullnameTxt"
+            android:layout_alignBottom="@+id/qsAvatarImg"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="-1dp"
+            android:layout_marginEnd="-1dp"
+            android:layout_marginBottom="0dp"
+            android:background="@android:color/transparent"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/noResultsLayout"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:id="@+id/noResultIcon"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/no_items"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/noResultIcon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="This question is still silent... Wanna be the first to answer?"
+            android:textAlignment="center"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/qsAnswersListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topBar"
+        android:background="#fff"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"/>
+
+    <RelativeLayout
+        android:id="@+id/qsMoreView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topBar"
+        android:background="#fff"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/qsDismissMoreViewButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dismiss_butt_black"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/qsMoreAvatarImg"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@id/qsDismissMoreViewButton"
+            android:src="@drawable/default_avatar"/>
+
+        <TextView
+            android:id="@+id/qsMoreFullNameTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/qsMoreAvatarImg"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@id/qsMoreAvatarImg"
+            android:maxLines="1"
+            android:text="•••"
+            android:textColor="#000"
+            android:textSize="13dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/qsMoreAnsweredTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/qsMoreFullNameTxt"
+            android:layout_alignStart="@id/qsMoreFullNameTxt"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="10dp"
+            android:maxLines="1"
+            android:text="Answered "
+            android:textColor="#333"
+            android:textSize="10sp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/qsMoreAnsweredTxt"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/qsMoreTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="••••••"
+                    android:textColor="#000"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/qsImagePreviewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/qsDismissImgPreviewButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dismiss_butt" />
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/qsImagePreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/qsDismissImgPreviewButton"
+            android:scaleType="fitCenter" />
+
+    </RelativeLayout>
+</RelativeLayout>

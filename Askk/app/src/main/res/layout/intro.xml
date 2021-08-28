@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".Intro">
+
+
+    <Button
+        android:id="@+id/inDismissButt"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/dismiss_butt_black"/>
+
+    <TextView
+        android:id="@+id/inAppNameTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/inDismissButt"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/main_color"
+        android:textSize="42sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/inDescriptionTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inAppNameTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Help people around the world by answering their questions, or post your own ones"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textAlignment="center"
+        android:textColor="#333"
+        android:textSize="11sp"/>
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/inDescriptionTxt"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:background="#c1c1c1"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inDescriptionTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:background="#fff"
+        android:text=" QUICKLY CONNECT WITH "
+        android:textSize="11sp"/>
+
+    <RelativeLayout
+        android:id="@+id/lGoogleLayout"
+        android:layout_width="220dp"
+        android:layout_height="44dp"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_butt">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:srcCompat="@drawable/google_icon" />
+
+        <Button
+            android:id="@+id/inGoogleButton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:text="Sign in with Google"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/lGoogleLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="38dp"
+        android:background="#c1c1c1"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lGoogleLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_weight="1"
+        android:background="#fff"
+        android:text="  OR USE YOUR EMAIL  "
+        android:textSize="11sp"/>
+
+    <RelativeLayout
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/inSignupButt"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/rounded_login_signup_butt"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textColor="@color/main_color"
+            android:textSize="12sp"/>
+
+        <Button
+            android:id="@+id/inloginButt"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/rounded_login_signup_butt"
+            android:text="Log In"
+            android:textAllCaps="false"
+            android:textColor="@color/main_color"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/inTosButt"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/transparent"
+        android:text="By signing up, you agree to our Terms of Use and Privacy Policy"
+        android:textAllCaps="false"
+        android:textColor="#333"
+        android:textSize="10sp"/>
+
+</RelativeLayout>

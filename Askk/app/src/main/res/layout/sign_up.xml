@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:focusableInTouchMode="true"
+    tools:context=".SignUp">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/supDismissButt"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/suTitleTxt"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/dismiss_butt_black"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/main_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/suTitleTxt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Create a new account"
+                    android:textAlignment="center"
+                    android:textColor="#333"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logo" />
+
+                <EditText
+                    android:id="@+id/supUsernameTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/suTitleTxt"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#c1c1c1"
+                    android:hint="USERNAME"
+                    android:imeOptions="actionNext"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAlignment="textStart"
+                    android:textColor="#333"
+                    android:textSize="12sp"/>
+
+                <EditText
+                    android:id="@+id/supPasswordTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/supUsernameTxt"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#c1c1c1"
+                    android:hint="PASSWORD"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAlignment="textStart"
+                    android:textColor="#333"
+                    android:textSize="12sp"/>
+
+                <EditText
+                    android:id="@+id/supEmailTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/supPasswordTxt"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#c1c1c1"
+                    android:hint="VALID EMAIL (for password recovery)"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAlignment="textStart"
+                    android:textColor="#333"
+                    android:textSize="12sp"/>
+
+                <EditText
+                    android:id="@+id/supFullnameTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/supEmailTxt"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#c1c1c1"
+                    android:hint="FULL NAME"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAlignment="textStart"
+                    android:textColor="#333"
+                    android:textSize="12sp"/>
+
+                <Button
+                    android:id="@+id/supSignUpButt"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/supFullnameTxt"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/rounded_login_signup_butt"
+                    android:text="Sign Up"
+                    android:textAllCaps="false"
+                    android:textColor="@color/main_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/supSignUpButt"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/supTosTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/supCheckboxButt"
+                        android:gravity="center_vertical"
+                        android:text="I agree with Terms of Service "
+                        android:textAlignment="textStart"
+                        android:textColor="@color/main_color"
+                        android:textSize="12sp"
+                        />
+
+                    <Button
+                        android:id="@+id/supCheckboxButt"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/checkbox_butt_off"
+                        android:textAllCaps="false"
+                        android:textColor="@color/main_color"
+                        android:textSize="12sp"
+                        android:textStyle="bold"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
